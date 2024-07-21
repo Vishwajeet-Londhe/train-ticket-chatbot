@@ -1,5 +1,5 @@
 {
-  "name": "train ticket booking chatbot",
+  "name": "Train Ticket Booking Chatbot-action",
   "type": "action",
   "counts": {
     "actions": 6,
@@ -11,7 +11,7 @@
   },
   "status": "Available",
   "language": "en",
-  "skill_id": "c1c32165-9905-454c-af1e-22cced68d99c",
+  "skill_id": "56d371de-f115-4c06-a9f8-130a0d64b040",
   "workspace": {
     "actions": [
       {
@@ -533,14 +533,14 @@
             "data_type": "any"
           }
         ],
-        "next_action": "action_31550",
+        "next_action": "action_43491",
         "disambiguation_opt_out": true
       },
       {
         "type": "standard",
         "steps": [
           {
-            "step": "step_167",
+            "step": "step_695",
             "output": {
               "generic": [
                 {
@@ -549,7 +549,7 @@
                       "text_expression": {
                         "concat": [
                           {
-                            "scalar": "Hello , I am train ticket booking Bot"
+                            "scalar": "Hello, I am Train Ticket Booking Chatbot"
                           }
                         ]
                       }
@@ -565,18 +565,15 @@
                 }
               ]
             },
-            "context": {
-              "variables": []
-            },
             "handlers": [],
             "resolver": {
               "type": "continue"
             },
-            "variable": "step_167",
-            "next_step": "step_937"
+            "variable": "step_695",
+            "next_step": "step_800"
           },
           {
-            "step": "step_937",
+            "step": "step_800",
             "output": {
               "generic": [
                 {
@@ -603,11 +600,11 @@
             "resolver": {
               "type": "continue"
             },
-            "variable": "step_937",
-            "next_step": "step_213"
+            "variable": "step_800",
+            "next_step": "step_963"
           },
           {
-            "step": "step_213",
+            "step": "step_963",
             "output": {
               "generic": [
                 {
@@ -619,7 +616,7 @@
                             "scalar": "Hello "
                           },
                           {
-                            "variable": "step_937"
+                            "variable": "step_800"
                           }
                         ]
                       }
@@ -634,31 +631,23 @@
             "resolver": {
               "type": "continue"
             },
-            "variable": "step_213"
+            "variable": "step_963"
           }
         ],
-        "title": "gretting",
-        "action": "action_33724",
+        "title": "Greeting",
+        "action": "action_23189",
         "boosts": [],
         "handlers": [],
         "condition": {
-          "intent": "action_33724_intent_17366"
+          "intent": "action_23189_intent_48416"
         },
         "variables": [
           {
-            "title": "Hello , I am train ticket booking Bot",
+            "title": "Hello, I am Train Ticket Booking Chatbot",
             "privacy": {
               "enabled": false
             },
-            "variable": "step_167",
-            "data_type": "any"
-          },
-          {
-            "title": "Hello {variable}",
-            "privacy": {
-              "enabled": false
-            },
-            "variable": "step_213",
+            "variable": "step_695",
             "data_type": "any"
           },
           {
@@ -666,7 +655,15 @@
             "privacy": {
               "enabled": false
             },
-            "variable": "step_937",
+            "variable": "step_800",
+            "data_type": "any"
+          },
+          {
+            "title": "Hello {variable}",
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_963",
             "data_type": "any"
           }
         ],
@@ -683,7 +680,7 @@
         "type": "standard",
         "steps": [
           {
-            "step": "step_488",
+            "step": "step_363",
             "output": {
               "generic": [
                 {
@@ -742,9 +739,6 @@
                 }
               ]
             },
-            "context": {
-              "variables": []
-            },
             "handlers": [
               {
                 "type": "not_found",
@@ -784,17 +778,17 @@
               }
             ],
             "question": {
-              "entity": "entity_43005",
+              "entity": "entity_34753",
               "max_tries": 3
             },
             "resolver": {
               "type": "continue"
             },
-            "variable": "step_488",
-            "next_step": "step_253"
+            "variable": "step_363",
+            "next_step": "step_951"
           },
           {
-            "step": "step_253",
+            "step": "step_951",
             "output": {
               "generic": [
                 {
@@ -818,22 +812,22 @@
             "resolver": {
               "type": "continue"
             },
-            "variable": "step_253",
+            "variable": "step_951",
             "condition": {
               "eq": [
                 {
-                  "variable": "step_488"
+                  "variable": "step_363"
                 },
                 {
                   "value": "Pune to Mumbai",
-                  "from_entity": "entity_43005"
+                  "from_entity": "entity_34753"
                 }
               ]
             },
-            "next_step": "step_107"
+            "next_step": "step_263"
           },
           {
-            "step": "step_107",
+            "step": "step_263",
             "output": {
               "generic": [
                 {
@@ -842,7 +836,7 @@
                       "text_expression": {
                         "concat": [
                           {
-                            "scalar": "Congratulations your ticket for Pune to Latur booked successfully.\n\n<br />\n\n\n\nTrain No : 17013\n\nTrain name :  Kazipet Express\n\nDeparting Station: Hadapsar (Pune) \n\nDeparting Time: 15:30"
+                            "scalar": "Congratulations your ticket for Pune to Latur booked successfully.\n\n<br />\n\n\n\nTrain No : 17013\n\nTrain name :  Kazipet Express\n\nDeparting Station: Hadapsar (Pune)\n\nDeparting Time: 15:30\n\n<br />\n\n\n\nHave a Nice Journey !"
                           }
                         ]
                       }
@@ -857,22 +851,22 @@
             "resolver": {
               "type": "continue"
             },
-            "variable": "step_107",
+            "variable": "step_263",
             "condition": {
               "eq": [
                 {
-                  "variable": "step_488"
+                  "variable": "step_363"
                 },
                 {
                   "value": "Pune to Latur",
-                  "from_entity": "entity_43005"
+                  "from_entity": "entity_34753"
                 }
               ]
             },
-            "next_step": "step_661"
+            "next_step": "step_795"
           },
           {
-            "step": "step_661",
+            "step": "step_795",
             "output": {
               "generic": [
                 {
@@ -892,29 +886,26 @@
                 }
               ]
             },
-            "context": {
-              "variables": []
-            },
             "handlers": [],
             "resolver": {
               "type": "continue"
             },
-            "variable": "step_661",
+            "variable": "step_795",
             "condition": {
               "eq": [
                 {
-                  "variable": "step_488"
+                  "variable": "step_363"
                 },
                 {
                   "value": "Pune to Hyderabad",
-                  "from_entity": "entity_43005"
+                  "from_entity": "entity_34753"
                 }
               ]
             },
-            "next_step": "step_613"
+            "next_step": "step_700"
           },
           {
-            "step": "step_613",
+            "step": "step_700",
             "output": {
               "generic": [
                 {
@@ -923,7 +914,7 @@
                       "text_expression": {
                         "concat": [
                           {
-                            "scalar": "congratulations your ticket for Pune to goa booked successfully"
+                            "scalar": "congratulations your ticket for Pune to Goa booked successfully"
                           }
                         ]
                       }
@@ -934,30 +925,33 @@
                 }
               ]
             },
+            "context": {
+              "variables": []
+            },
             "handlers": [],
             "resolver": {
               "type": "continue"
             },
-            "variable": "step_613",
+            "variable": "step_700",
             "condition": {
               "eq": [
                 {
-                  "variable": "step_488"
+                  "variable": "step_363"
                 },
                 {
                   "value": "Pune to Goa",
-                  "from_entity": "entity_43005"
+                  "from_entity": "entity_34753"
                 }
               ]
             }
           }
         ],
-        "title": "Book ticket",
-        "action": "action_31550",
+        "title": "Book Ticket",
+        "action": "action_43491",
         "boosts": [],
         "handlers": [],
         "condition": {
-          "intent": "action_31550_intent_25927"
+          "intent": "action_43491_intent_10976"
         },
         "variables": [
           {
@@ -965,15 +959,7 @@
             "privacy": {
               "enabled": false
             },
-            "variable": "step_107",
-            "data_type": "any"
-          },
-          {
-            "title": "Congratulations your ticket for Pune to Mumbai booked successful",
-            "privacy": {
-              "enabled": false
-            },
-            "variable": "step_253",
+            "variable": "step_263",
             "data_type": "any"
           },
           {
@@ -981,15 +967,15 @@
             "privacy": {
               "enabled": false
             },
-            "variable": "step_488",
+            "variable": "step_363",
             "data_type": "any"
           },
           {
-            "title": "congratulations your ticket for Pune to goa booked successfully",
+            "title": "congratulations your ticket for Pune to Goa booked successfully",
             "privacy": {
               "enabled": false
             },
-            "variable": "step_613",
+            "variable": "step_700",
             "data_type": "any"
           },
           {
@@ -997,12 +983,20 @@
             "privacy": {
               "enabled": false
             },
-            "variable": "step_661",
+            "variable": "step_795",
+            "data_type": "any"
+          },
+          {
+            "title": "Congratulations your ticket for Pune to Mumbai booked successful",
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_951",
             "data_type": "any"
           }
         ],
         "launch_mode": "learning",
-        "next_action": "action_33724",
+        "next_action": "action_23189",
         "topic_switch": {
           "allowed_from": true,
           "allowed_into": true,
@@ -1013,42 +1007,7 @@
     ],
     "intents": [
       {
-        "intent": "action_31550_intent_25927",
-        "examples": [
-          {
-            "text": "train"
-          },
-          {
-            "text": "ticket"
-          },
-          {
-            "text": "Book ticket"
-          }
-        ]
-      },
-      {
-        "intent": "fallback_connect_to_agent",
-        "examples": [
-          {
-            "text": "Can I connect to an agent?"
-          },
-          {
-            "text": "I would like to speak to someone"
-          },
-          {
-            "text": "Call agent"
-          },
-          {
-            "text": "Agent help"
-          },
-          {
-            "text": "I would like to speak to a human"
-          }
-        ],
-        "description": "Please transfer me to an agent"
-      },
-      {
-        "intent": "action_33724_intent_17366",
+        "intent": "action_23189_intent_48416",
         "examples": [
           {
             "text": "hey"
@@ -1060,16 +1019,53 @@
             "text": "hi"
           },
           {
-            "text": "gretting"
+            "text": "Greeting"
+          }
+        ]
+      },
+      {
+        "intent": "fallback_connect_to_agent",
+        "examples": [
+          {
+            "text": "I would like to speak to someone"
+          },
+          {
+            "text": "Call agent"
+          },
+          {
+            "text": "Agent help"
+          },
+          {
+            "text": "I would like to speak to a human"
+          },
+          {
+            "text": "Can I connect to an agent?"
+          }
+        ],
+        "description": "Please transfer me to an agent"
+      },
+      {
+        "intent": "action_43491_intent_10976",
+        "examples": [
+          {
+            "text": "train"
+          },
+          {
+            "text": "book"
+          },
+          {
+            "text": "ticket"
+          },
+          {
+            "text": "Book Ticket"
           }
         ]
       }
     ],
     "entities": [
       {
-        "entity": "profane_words",
-        "values": [],
-        "fuzzy_match": false
+        "entity": "sys-yes-no",
+        "values": []
       },
       {
         "entity": "danger_words",
@@ -1077,11 +1073,12 @@
         "fuzzy_match": false
       },
       {
-        "entity": "sys-yes-no",
-        "values": []
+        "entity": "profane_words",
+        "values": [],
+        "fuzzy_match": false
       },
       {
-        "entity": "entity_43005",
+        "entity": "entity_34753",
         "values": [
           {
             "type": "synonyms",
@@ -1240,18 +1237,18 @@
     "learning_opt_out": false,
     "language": "en"
   },
-  "description": "created for assistant 509ade53-6a40-4417-919d-498f0a5159af",
+  "description": "created for assistant c84cd980-e4ed-4626-8ce4-c81527144a1a",
   "dialog_settings": {
-    "source_assistant": "146f53b8-36e0-4125-8b11-f57dcb76ad28"
+    "source_assistant": "c3f972cc-6b3e-46cc-92f0-49cb8954a3c7"
   },
-  "created": "2024-07-18T13:42:17.228Z",
-  "updated": "2024-07-18T13:42:17.228Z",
+  "created": "2024-07-21T01:46:13.108Z",
+  "updated": "2024-07-21T01:46:13.108Z",
   "snapshot": "1",
-  "assistant_id": "509ade53-6a40-4417-919d-498f0a5159af",
+  "assistant_id": "c84cd980-e4ed-4626-8ce4-c81527144a1a",
   "assistant_references": [
     {
-      "name": "train ticket booking chatbot",
-      "assistant_id": "146f53b8-36e0-4125-8b11-f57dcb76ad28",
+      "name": "Train Ticket Booking Chatbot",
+      "assistant_id": "c3f972cc-6b3e-46cc-92f0-49cb8954a3c7",
       "skill_reference": "actions skill"
     }
   ]
