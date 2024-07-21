@@ -1250,7 +1250,7 @@
   "assistant_id": "509ade53-6a40-4417-919d-498f0a5159af",
   "assistant_references": [
     {
-      "name": "modern college admission chat bot",
+      "name": "train ticket booking chatbot",
       "assistant_id": "146f53b8-36e0-4125-8b11-f57dcb76ad28",
       "skill_reference": "actions skill"
     }
